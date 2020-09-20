@@ -1,49 +1,65 @@
 {
-    "manifest_version": 2,
-    "name": "Open Searchresult Shortcuts",
-    "version": "1.0",
-    "permissions": [
-      "tabs"
-    ],
-    "background": {
-        "scripts": ["background.js"]
-    },
-    "content_scripts": [
-        {
-        "matches": [
-            "https://www.google.com/search*"
-        ],
-        "js": ["content.js"]
-        }
-    ],
-    "commands": {
-      "0": {
-        "suggested_key": {
-          "default": "Alt+1",
-          "mac": "Alt+1"
-        },
-        "description": "."
-      },
-      "1": {
-        "suggested_key": {
-          "default": "Alt+2",
-          "mac": "Alt+2"
-        },
-        "description": "."
-      },
-      "2": {
-        "suggested_key": {
-          "default": "Alt+3",
-          "mac": "Alt+3"
-        },
-        "description": "."
-      },
-      "3": {
-        "suggested_key": {
-          "default": "Alt+4",
-          "mac": "Alt+4"
-        },
-        "description": "."
-      }
+  "manifest_version": 2,
+  "name": "Open SearchResult Shortcuts",
+  "version": "1.0",
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_title": "Open SearchResult Shortcuts",
+    "default_icon": "icons/icon32.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search*"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
+  ],
+  "commands": {
+    "0": {
+      "suggested_key": {
+        "default": "Alt+1",
+        "mac": "Alt+1"
+      },
+      "description": "."
+    },
+    "1": {
+      "suggested_key": {
+        "default": "Alt+2",
+        "mac": "Alt+2"
+      },
+      "description": "."
+    },
+    "2": {
+      "suggested_key": {
+        "default": "Alt+3",
+        "mac": "Alt+3"
+      },
+      "description": "."
+    },
+    "3": {
+      "suggested_key": {
+        "default": "Alt+4",
+        "mac": "Alt+4"
+      },
+      "description": "."
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "24": "icons/icon24.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
+}
