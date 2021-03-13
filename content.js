@@ -1,6 +1,10 @@
 chrome.runtime.onMessage.addListener((request) => {
-    const searchresultLinks = document.getElementsByTagName('h3');
-    const requestedlink = searchresultLinks.item(request.linkIndex).childNodes[0];
+    const scope = document.getElementById('search');
+    console.log(scope);
+    const searchresultLinks = scope.getElementsByTagName('a');
+    console.log(searchresultLinks);
+    const requestedLink = searchresultLinks.item(request.linkIndex).childNodes[0];
+    console.log(requestedLink);
 
-    requestedlink.click();
+    requestedLink.click();
 });
